@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background6_image">
+    <!-- Include Toolbar -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- ScrollView to allow scrolling when content overflows -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--  the menu section-->
+            <!-- Title Menu -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/ourmenu"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textColor="@color/cream_color"
+                android:textSize="70sp" />
+
+            <!--Starters section-->
+            <TextView
+                android:id="@+id/starters_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/cream_color"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="@string/starters"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+
+            <!-- Starters Image and Description -->
+            <LinearLayout
+                android:id="@+id/starters_images_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Salad Pasta -->
+                <LinearLayout
+                    android:id="@+id/salad_pasta_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pasta_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/starters_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pastasalad" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pasta_salad"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/pasta_salad_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/pasta_salad_description"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+
+                <!-- Pesto Mozzarella Arancini -->
+                <LinearLayout
+                    android:id="@+id/arancini_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/arancini_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/starters_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pestomozzarellaarancini" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arancini"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/arancini_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/arancini_description"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+
+                <!-- grilled eggplants  -->
+                <LinearLayout
+                    android:id="@+id/grilled_eggplants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/grilled_eggplants_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/starters_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/grilledeggplants" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grilled_eggplants"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/grilled_eggplants_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/grilled_eggplant_description"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Main Course Section -->
+            <TextView
+                android:id="@+id/Main_Course_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/cream_color"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/main_course"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <!-- Main Course Images and Description -->
+            <LinearLayout
+                android:id="@+id/Main_Course_images_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- ravioli -->
+                <LinearLayout
+                    android:id="@+id/ravioli_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ravioli_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/main_course_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ravioli" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ravioli"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/ravioli_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/ravioli_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+
+                <!-- pizza -->
+                <LinearLayout
+                    android:id="@+id/pizzamargherita_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pizzamargherita_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/main_course_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pizzamargherita" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pizza_margherita"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/pizzamargherita_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/pizza_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+
+                <!-- Creamy broccoli pasta -->
+                <LinearLayout
+                    android:id="@+id/pastabroccoli_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pastabroccoli_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/main_course_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pasta" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/creamy_broccoli_pasta_with_four_cheeses"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/pasta_broccoli_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/pasta_broccoli_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Dessert Section -->
+
+            <TextView
+                android:id="@+id/Dessert_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/cream_color"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="@string/Dessert"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:id="@+id/Dessert_images_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- tiramisu  -->
+                <LinearLayout
+                    android:id="@+id/tiramisu_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/tiramisu_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/Dessert_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tiramisu" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tiramisu"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/tiramisu_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/tiramisu_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+
+                <!-- cream Burlee  -->
+                <LinearLayout
+                    android:id="@+id/cream_Burlee_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/cream_Burlee_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/cream_Burlee_image"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/creamburlee" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cream_Burlee"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/cream_Burlee_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/cream_Burlee_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" /> <!-- Initially hidden -->
+                </LinearLayout>
+            </LinearLayout>
+        <!--Starters section-->
+
+
+            <!-- Beverages Section -->
+            <TextView
+                android:id="@+id/Beverages_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/cream_color"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/Beverages"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+
+            <LinearLayout
+                android:id="@+id/Beverages_images_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+
+                <!-- softdrinks  -->
+                <LinearLayout
+                    android:id="@+id/softdrinks_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/softdrinks_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/softdrinks"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/softdrinks" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/softdrinks"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/softdrinks_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/softdrinks_description"
+                        android:textColor="@color/black"
+                        android:background="@color/cream_color"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- pink Lemonade Mimosa  -->
+                <LinearLayout
+                    android:id="@+id/pinklemonademimosa_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/pinklemonademimosa_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/pinklemonademimosa"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pinklemonademimosa" /> <!-- Set onClick listener -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pinklemonademimosa"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/pinklemonademimosa_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/pinklemonademimosa_description"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- mangomilkshake  -->
+                <LinearLayout
+                    android:id="@+id/mangomilkshake_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mangomilkshake_image_button"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/mangomilkshake"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mangomilkshake" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mangomilkshake"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/mangomilkshake_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/mangomilkshake_description"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@color/cream_color"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background4_image">
+    <!-- Include Toolbar -->
+    <include layout="@layout/toolbar_layout" />
+    <!-- ScrollView to allow scrolling when content overflows -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Dialog Title -->
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/black"
+                android:text="@string/reservation_details"
+                android:textColor="@color/cream_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <!-- Personal details layout -->
+            <LinearLayout
+                android:id="@+id/dialog_personal_details_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/editTextFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/black"
+                    android:hint="@string/please_enter_your_full_name_here"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:autofillHints="username" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/black"
+                    android:hint="@string/please_enter_your_email_here"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:autofillHints="name@gmail.com" />
+
+                <EditText
+                    android:id="@+id/editTextPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/black"
+                    android:hint="@string/please_enter_your_phone_number_here"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:autofillHints="05X-XXX-XXXX" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/cream_color"
+                    android:text="@string/i_consent_to_share_the_information_with_the_restaurant_team_and_all_staff_members"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!-- Dietary Preference -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/dietary_preference"
+                android:textColor="@color/cream_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/dietary_preference_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_vegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vegan"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radio_not_vegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_vegan"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <!-- Select number of seats -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/select_number_of_seats"
+                android:textColor="@color/cream_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/seat_selection_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/cream_color"
+                android:entries="@array/seat_numbers"
+                android:textSize="20sp" />
+
+            <!-- Payment method -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/payment_method"
+                android:textColor="@color/cream_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/payment_method_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cash"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/radio_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/credit_card"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <!-- Date and Time Picker Dialog -->
+            <Button
+                android:id="@+id/buttonPickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_date"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:onClick="showDatePickerDialog"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- Time display -->
+            <TextView
+                android:id="@+id/timeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cream_color"
+                android:text="@string/select_arrival_time"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/time_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@color/cream_color"
+                android:entries="@array/time_options"
+                android:textSize="20sp" />
+
+            <!--            reserve seat button-->
+
+            <Button
+                android:id="@+id/reserveSeatsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/reserve_seats"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
